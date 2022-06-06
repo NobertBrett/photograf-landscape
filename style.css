@@ -27,9 +27,10 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
   --big: calc(6rem + 1vw);
-  --special-color: #906272;
-  --background-color: #472d30;
-  --gray-text: #525252;
+  --special-color: #E0AFA0;
+  --background-color: #D2E4C4;
+  --gray-text: #204E4A;
+  --accent-color: #0FA3B1;
   scroll-behavior: smooth;
 }
 
@@ -104,11 +105,12 @@ nav {
 }
 .hero {
   min-height: 90vh;
-  width: 95%;
+  width: 100%;
   margin: 0 0 0 auto;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  background-color: var(--background-color);
 }
 
 .hero-introduction {
@@ -156,8 +158,8 @@ nav {
 }
 
 .button:hover {
-  background-color: #472d30;
-  box-shadow: 0 15px 20px rgba(71, 45, 48, 0.4);
+  background-color: #0FA3B1;
+  box-shadow: 0 15px 20px rgba(15, 163, 177, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
@@ -189,10 +191,9 @@ nav {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  background-color: var(--special-color);
 }
 .about-text {
-  color: white;
-  background: var(--background-color);
   flex: 2 1 40rem;
   justify-content: space-around;
 }
@@ -202,10 +203,12 @@ nav {
 .about-text h3 {
   padding: 2rem 0rem;
   font-family: "Ruhl Medium";
+  color: var(--gray-text);
 }
 .about-text h2 {
   font-family: "Vibes";
   padding: 4rem;
+  color: var(--gray-text);
 }
 .about-image {
   flex: 1 1 40rem;
@@ -247,7 +250,6 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
   background: var(--background-color);
   padding: 5rem 10rem;
   text-align: center;
@@ -260,6 +262,8 @@ nav {
   min-height: 90vh;
   display: flex;
   flex-wrap: wrap;
+  color: white;
+  background-color: var(--gray-text);
 }
 .form-wrapper {
   flex: 3 1 40rem;
@@ -280,12 +284,10 @@ nav {
   border: none;
   border-radius: 15px;
   padding: 15px;
-  background-color: #FFE1A8;
-  box-shadow: 6px 6px 12px #ffffff,
-  -6px -6px 12px #c5c5c5;
+  background-color: var(--background-color);
   font-size: medium;
   font-weight: bold;
-  max-width: 250px;
+  min-width: 300px;
   transition: all 0.3s ease 0s;
 }
 .button {
@@ -325,7 +327,7 @@ nav {
   top: 180%;
   width: 160%;
   height: 190%;
-  background-color: #472D30;
+  background-color: var(--accent-color);
   border-radius: 50%;
   display: block;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -334,18 +336,18 @@ nav {
 
 .button:hover {
   color: #ffffff;
-  border: 1px solid #E26D5C;
+  border: 1px solid var(--gray-text);
 }
 
 .button:hover:before {
   top: -35%;
-  background-color: #472D30;
+  background-color: var(--accent-color);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .button:hover:after {
   top: -45%;
-  background-color: #472D30;
+  background-color: var(--accent-color);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 .contact img {
@@ -354,7 +356,7 @@ nav {
 
 /*FOOTER SECTION */
 footer {
-  background: var(--background-color);
+  background: var(--special-color);
   color: white;
   display: flex;
   padding: 3rem 5%;
